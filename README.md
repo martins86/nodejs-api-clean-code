@@ -3,10 +3,12 @@
 API em NodeJS com Clean Architecture e TDD.
 
 ```
-▶ npm init -y
+▶ npm init -y              /// package.json padrão.
 
 ▶ npm i standard -D        /// Padrão de código.
 ▶ npm i lint-staged -D     /// Exec de scripts no stage.
 ▶ npm i husky@next -D      /// Exec scripts antes do commit.
+
+▶ npm i jest -D            /// Framework de testes.
 
 ```
