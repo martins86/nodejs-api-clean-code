@@ -6,17 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
-  },
-  "husty": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/martins86/poc-clean-node-api.git"
