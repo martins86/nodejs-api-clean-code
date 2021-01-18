@@ -17,10 +17,13 @@
     "url": "git+https://github.com/martins86/poc-clean-node-api.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thiago Martins de Freitas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/martins86/poc-clean-node-api/issues"
+  },
+  "engines" : { 
+    "node" : "^12.18.3" 
   },
   "homepage": "https://github.com/martins86/poc-clean-node-api#readme",
   "devDependencies": {
