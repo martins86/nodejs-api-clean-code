@@ -1,10 +1,13 @@
 const LoginRouter = require('./login-router')
 const MissingParamError = require('./../helpers/missing-param-error')
 
+const makeSut = () => {
+  return new LoginRouter()
+}
 describe('Login Router', () => {
   test('Should return 400 if no email is provided', () => {
     // Arrange
-    const sut = new LoginRouter()
+    const sut = makeSut()
     const httpRequest = {
       body: {
         password: 'any_password'
@@ -21,7 +24,7 @@ describe('Login Router', () => {
 
   test('Should return 400 if no password is provided', () => {
     // Arrange
-    const sut = new LoginRouter()
+    const sut = makeSut()
     const httpRequest = {
       body: {
         email: 'any_email@.com'
@@ -38,7 +41,7 @@ describe('Login Router', () => {
 
   test('Should return 500 if no httpRequest is provided', () => {
     // Arrange
-    const sut = new LoginRouter()
+    const sut = makeSut()
 
     // Assert
     const httpResponse = sut.route()
@@ -49,7 +52,7 @@ describe('Login Router', () => {
 
   test('Should return 500 if no httpRequest has no body', () => {
     // Arrange
-    const sut = new LoginRouter()
+    const sut = makeSut()
     const httpRequest = {}
 
     // Assert
