@@ -38,7 +38,7 @@
 
 <br>
 
-![npm][npm-img] ![node-current](https://img.shields.io/node/v/node)
+![npm][npm-img] ![node-current](https://img.shields.io/node/v/latest-version)
 
 <br>
 
@@ -54,8 +54,8 @@
 [version-img]: https://img.shields.io/github/package-json/v/martins86/poc-clean-node-api
 [language-img]: https://img.shields.io/github/languages/top/martins86/poc-clean-node-api
 [license-img]: https://img.shields.io/github/license/martins86/poc-clean-node-api
-[license-url]: https://github.com/martins86/poc-clean-node-api/blob/master/LICENSE
-[travis-img]: https://travis-ci.com/martins86/poc-clean-node-api.svg?branch=master
+[license-url]: https://github.com/martins86/poc-clean-node-api/blob/main/LICENSE
+[travis-img]: https://travis-ci.com/martins86/poc-clean-node-api.svg?branch=main
 [travis-url]: https://travis-ci.com/martins86/poc-clean-node-api
 [commit-img]: https://img.shields.io/github/last-commit/martins86/poc-clean-node-api
 [npm-img]: https://img.shields.io/npm/v/npm
