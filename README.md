@@ -4,6 +4,7 @@
 
 ![GitHub package.json version][version-img]
 ![GitHub top language][language-img]
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![GitHub license][license-img]][license-url]
 ![GitHub last commit][commit-img]
 
