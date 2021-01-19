@@ -11,25 +11,24 @@
 
 > API em NodeJS com Clean Architecture e TDD.
 
-
 <br>
 
 # Comandos NPM
 ```
 ▶ npm init -y              /// package.json padrão.
+```
 
+```
 ▶ npm i -g standard lint-staged husky jest /// Global.
+```
 
+```
 ▶ npm i standard -D        /// Padrão de código.
 ▶ npm i lint-staged -D     /// Exec de scripts no stage.
 ▶ npm i husky@next -D      /// Exec scripts antes do commit.
 
 ▶ npm i jest -D            /// Framework de testes.
-
 ```
-
-
-
 
 
 <br>
@@ -44,10 +43,12 @@
 
 # Dev Dependencies
 
-![GitHub package.json dependency version (dev dep on branch)][husky-img]
-![GitHub package.json dependency version (dev dep on branch)][jest-img]
-![GitHub package.json dependency version (dev dep on branch)][lint-staged-img]
-![GitHub package.json dependency version (dev dep on branch)][standard-img]
+| Package | NPMJS | Shields |
+| ------ | ------ | ------ |
+| Husky | https://www.npmjs.com/package/husky | ![GitHub package.json dependency version (dev dep on branch)][husky-img] |
+| Jest | https://www.npmjs.com/package/jest | ![GitHub package.json dependency version (dev dep on branch)][jest-img] |
+| lint-staged | https://www.npmjs.com/package/lint-staged | ![GitHub package.json dependency version (dev dep on branch)][lint-staged-img] |
+| JavaScript Standard Style | https://www.npmjs.com/package/standard | ![GitHub package.json dependency version (dev dep on branch)][standard-img] |
 
 <!-- Markdown link & images -->
 
