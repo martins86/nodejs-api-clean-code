@@ -9,15 +9,21 @@ module.exports = class LoginRouter {
     if (!httpRequest || !httpRequest.body || !this.authUseCase || !this.authUseCase.auth) {
       return HttpResponse.serverError()
     }
+
     const { email, password } = httpRequest.body
     if (!email) {
-      return HttpResponse.badRequestError('email')
+      return HttpResponse.badRequest('email')
     }
-    if (!password) {
-      return HttpResponse.badRequestError('password')
-    }
-    this.authUseCase.auth(email, password)
 
-    return HttpResponse.unauthorizedError()
+    if (!password) {
+      return HttpResponse.badRequest('password')
+    }
+    const accessToken = this.authUseCase.auth(email, password)
+
+    if (!accessToken) {
+      return HttpResponse.unauthorizedError()
+    }
+
+    return HttpResponse.ok()
   }
 }
