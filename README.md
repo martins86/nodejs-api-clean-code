@@ -1,4 +1,4 @@
-# Poc Clean NodeJs Api - [![Build Status][travis-img]][travis-url]
+# Clean code NodeJs Api - [![Build Status][travis-img]][travis-url]
 
 <br>
 
@@ -53,16 +53,16 @@
 
 <!-- Markdown link & images -->
 
-[version-img]: https://img.shields.io/github/package-json/v/martins86/poc-clean-node-api
-[language-img]: https://img.shields.io/github/languages/top/martins86/poc-clean-node-api
-[license-img]: https://img.shields.io/github/license/martins86/poc-clean-node-api
-[license-url]: https://github.com/martins86/poc-clean-node-api/blob/main/LICENSE
-[travis-img]: https://travis-ci.com/martins86/poc-clean-node-api.svg?branch=main
-[travis-url]: https://travis-ci.com/martins86/poc-clean-node-api
-[commit-img]: https://img.shields.io/github/last-commit/martins86/poc-clean-node-api
+[version-img]: https://img.shields.io/github/package-json/v/martins86/curso-api-node-clean-code
+[language-img]: https://img.shields.io/github/languages/top/martins86/curso-api-node-clean-code
+[license-img]: https://img.shields.io/github/license/martins86/curso-api-node-clean-code
+[license-url]: https://github.com/martins86/curso-api-node-clean-code/blob/main/LICENSE
+[travis-img]: https://travis-ci.com/martins86/curso-api-node-clean-code.svg?branch=main
+[travis-url]: https://travis-ci.com/martins86/curso-api-node-clean-code
+[commit-img]: https://img.shields.io/github/last-commit/martins86/curso-api-node-clean-code
 [npm-img]: https://img.shields.io/npm/v/npm
 
-[husky-img]: https://img.shields.io/github/package-json/dependency-version/martins86/poc-clean-node-api/dev/husky
-[jest-img]: https://img.shields.io/github/package-json/dependency-version/martins86/poc-clean-node-api/dev/jest
-[lint-staged-img]: https://img.shields.io/github/package-json/dependency-version/martins86/poc-clean-node-api/dev/lint-staged
-[standard-img]: https://img.shields.io/github/package-json/dependency-version/martins86/poc-clean-node-api/dev/standard
+[husky-img]: https://img.shields.io/github/package-json/dependency-version/martins86/curso-api-node-clean-code/dev/husky
+[jest-img]: https://img.shields.io/github/package-json/dependency-version/martins86/curso-api-node-clean-code/dev/jest
+[lint-staged-img]: https://img.shields.io/github/package-json/dependency-version/martins86/curso-api-node-clean-code/dev/lint-staged
+[standard-img]: https://img.shields.io/github/package-json/dependency-version/martins86/curso-api-node-clean-code/dev/standard
