@@ -15,22 +15,32 @@
 <br>
 
 # Comandos NPM
-```
-▶ npm init -y              /// package.json padrão.
-```
-
-```
-▶ npm i -g standard lint-staged husky jest /// Global.
+```sh
+## iniciando o package.json padrão.
+npm init -y
 ```
 
-```
-▶ npm i standard -D        /// Padrão de código.
-▶ npm i lint-staged -D     /// Exec de scripts no stage.
-▶ npm i husky@next -D      /// Exec scripts antes do commit.
-
-▶ npm i jest -D            /// Framework de testes.
+```sh
+## instalando packages global.
+npm i -g standard lint-staged husky jest.
 ```
 
+```sh
+## instalando packages dev.
+npm i standard lint-staged husky@next jest -D
+```
+
+```sh
+## configurando o husky
+npm set-script prepare "husky install"
+npm run prepare
+```
+
+```sh
+## adicionando Hooks
+npx husky add .husky/pre-commit "lint-staged"
+npx husky add .husky/pre-push "npm run test:ci"
+```
 
 <br>
 
