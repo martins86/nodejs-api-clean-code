@@ -26,9 +26,6 @@ module.exports = class LoginRouter {
       }
       return HttpResponse.ok({ accessToken })
     } catch (error) {
-      if (error.message) {
-        console.error(error.message)
-      }
       return HttpResponse.serverError()
     }
   }
