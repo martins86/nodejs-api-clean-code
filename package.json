@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:dev": "jest --watch --silent --noStackTrace",
-    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace --colors"
+    "test:dev": "jest --watch --silent --noStackTrace --coverage",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace --colors",
+    "test:ci": "jest --coverage"
   },
   "standard": {
     "env": [
