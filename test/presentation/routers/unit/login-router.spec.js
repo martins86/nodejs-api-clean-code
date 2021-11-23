@@ -311,10 +311,10 @@ describe('Login Router', () => {
       }
     }
 
-    // Assert
+    // Act
     await sut.route(httpRequest)
 
-    // Act
+    // Assert
     expect(emailValidatorSpy.email).toBe(httpRequest.body.email)
   })
 })
