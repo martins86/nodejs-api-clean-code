@@ -7,7 +7,7 @@
     "test": "jest",
     "test:dev": "jest --watch --silent --noStackTrace --coverage",
     "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace --colors",
-    "test:ci": "jest --coverage"
+    "test:ci": "jest --silent --noStackTrace --coverage"
   },
   "standard": {
     "env": [
