@@ -4,10 +4,11 @@
   "description": "API em NodeJS com Clean Architecture e TDD.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:dev": "jest --watch --silent --noStackTrace --coverage",
-    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace --colors",
-    "test:ci": "jest --silent --noStackTrace --coverage"
+    "test": "jest --silent --noStackTrace --coverage --passWithNoTests",
+    "test:unit": "npm run test -- --watch -c jest-unit.config.js",
+    "test:integration": "npm run test -- --watch -c jest-integration.config.js",
+    "test:staged": "npm run test -- --findRelatedTests --colors",
+    "test:ci": "npm run test -- --colors"
   },
   "standard": {
     "env": [
