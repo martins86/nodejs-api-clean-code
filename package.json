@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test-watch": "jest --watchAll",
-    "test:staged": "jest --passWithNoTests"
+    "test:dev": "jest --watch --silent --noStackTrace",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace --colors"
   },
   "standard": {
     "env": [
@@ -23,8 +23,8 @@
   "bugs": {
     "url": "https://github.com/martins86/curso-api-node-clean-code/issues"
   },
-  "engines" : { 
-    "node" : "^12.18.3" 
+  "engines": {
+    "node": "^12.18.3"
   },
   "homepage": "https://github.com/martins86/curso-api-node-clean-code#readme",
   "devDependencies": {
