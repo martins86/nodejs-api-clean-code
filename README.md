@@ -43,6 +43,11 @@ npx husky add .husky/pre-commit "lint-staged"
 npx husky add .husky/pre-push "npm run test:ci"
 ```
 
+```sh
+## adicionando Validator
+npm i validator
+```
+
 <br>
 
 # Versions
