@@ -68,8 +68,8 @@ npx husky add .husky/pre-push "npm run test:ci"
 [language-img]: https://img.shields.io/github/languages/top/martins86/nodejs-api-js-clean-code
 [license-img]: https://img.shields.io/github/license/martins86/nodejs-api-js-clean-code
 [license-url]: https://github.com/martins86/nodejs-api-js-clean-code/blob/main/LICENSE
-[travis-img]: https://app.travis-ci.com/github/martins86/nodejs-api-js-clean-code.svg?branch=main
-[travis-url]: https://app.travis-ci.com/github/martins86/nodejs-api-js-clean-code
+[travis-img]: https://app.travis-ci.com/github/martins86/nodejs-api-clean-code.svg?branch=main
+[travis-url]: https://app.travis-ci.com/github/martins86/nodejs-api-clean-code
 [commit-img]: https://img.shields.io/github/last-commit/martins86/nodejs-api-js-clean-code
 [npm-img]: https://img.shields.io/npm/v/npm
 [husky-img]: https://img.shields.io/github/package-json/dependency-version/martins86/nodejs-api-js-clean-code/dev/husky
