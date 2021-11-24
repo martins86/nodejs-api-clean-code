@@ -7,7 +7,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![GitHub license][license-img]][license-url]
 ![GitHub last commit][commit-img]
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=martins86_nodejs-api-js-clean-code)](https://sonarcloud.io/summary/new_code?id=martins86_nodejs-api-js-clean-code)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=martins86_nodejs-api-js-clean-code&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=martins86_nodejs-api-js-clean-code)
 
 <br>
 
@@ -74,8 +74,8 @@ npm i validator
 [language-img]: https://img.shields.io/github/languages/top/martins86/nodejs-api-js-clean-code
 [license-img]: https://img.shields.io/github/license/martins86/nodejs-api-js-clean-code
 [license-url]: https://github.com/martins86/nodejs-api-js-clean-code/blob/main/LICENSE
-[travis-img]: https://app.travis-ci.com/github/martins86/nodejs-api-js-clean-code.svg?branch=main
-[travis-url]: https://app.travis-ci.com/github/martins86/nodejs-api-js-clean-code
+[travis-img]: https://app.travis-ci.com/martins86/nodejs-api-js-clean-code.svg?branch=main
+[travis-url]: https://app.travis-ci.com/martins86/nodejs-api-js-clean-code
 [commit-img]: https://img.shields.io/github/last-commit/martins86/nodejs-api-js-clean-code
 [npm-img]: https://img.shields.io/npm/v/npm
 [husky-img]: https://img.shields.io/github/package-json/dependency-version/martins86/nodejs-api-js-clean-code/dev/husky
