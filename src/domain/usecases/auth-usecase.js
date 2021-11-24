@@ -20,8 +20,10 @@ module.exports = class AuthUseCase {
     if (!user) {
       return null
     }
-    await this.encryptSpy.compare(password, user.password)
+    const isValid = await this.encryptSpy.compare(password, user.password)
 
-    return null
+    if (!isValid) {
+      return null
+    }
   }
 }
