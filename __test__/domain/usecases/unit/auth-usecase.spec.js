@@ -1,5 +1,5 @@
-const { AuthUseCase } = require('../../../src/domain/usecases')
-const { MissingParamError } = require('../../../src/utils/errors')
+const { AuthUseCase } = require('../../../../src/domain/usecases')
+const { MissingParamError } = require('../../../../src/utils/errors')
 
 const makeEncrypt = () => {
   class EncryptSpy {
@@ -23,7 +23,7 @@ const makeLoadUserByEmailRepository = () => {
   }
   const loadUserByEmailRepositorySpy = new LoadUserByEmailRepositorySpy()
   loadUserByEmailRepositorySpy.user = {
-    password: 'hashed'
+    password: 'hashed_password'
   }
   return loadUserByEmailRepositorySpy
 }
@@ -58,7 +58,7 @@ describe('Auth UseCase', () => {
     const { sut } = makeSut()
 
     // Act
-    const promise = sut.auth('any_email@email.com')
+    const promise = sut.auth('any_email@mail.com')
 
     // Assert
     expect(promise).rejects.toThrow(new MissingParamError('password'))
@@ -69,10 +69,10 @@ describe('Auth UseCase', () => {
     const { sut, loadUserByEmailRepositorySpy } = makeSut()
 
     // Act
-    await sut.auth('any_email@email.com', 'any')
+    await sut.auth('any_email@mail.com', 'any_password')
 
     // Assert
-    expect(loadUserByEmailRepositorySpy.email).toBe('any_email@email.com')
+    expect(loadUserByEmailRepositorySpy.email).toBe('any_email@mail.com')
   })
 
   test('Should throw if no LoadUserByEmailRepository si provided', async () => {
@@ -80,7 +80,7 @@ describe('Auth UseCase', () => {
     const sut = new AuthUseCase()
 
     // Act
-    const promise = sut.auth('any_email@email.com', 'any')
+    const promise = sut.auth('any_email@mail.com', 'any_password')
 
     // Assert
     expect(promise).rejects.toThrow()
@@ -91,7 +91,7 @@ describe('Auth UseCase', () => {
     const sut = new AuthUseCase({})
 
     // Act
-    const promise = sut.auth('any_email@email.com', 'any')
+    const promise = sut.auth('any_email@mail.com', 'any_password')
 
     // Assert
     expect(promise).rejects.toThrow()
@@ -103,7 +103,7 @@ describe('Auth UseCase', () => {
     loadUserByEmailRepositorySpy.user = null
 
     // Act
-    const accessToken = await sut.auth('invalid_email@email.com', 'any')
+    const accessToken = await sut.auth('invalid_email@mail.com', 'any_password')
 
     // Assert
     expect(accessToken).toBeNull()
@@ -115,7 +115,7 @@ describe('Auth UseCase', () => {
     encryptSpy.isValid = false
 
     // Act
-    const accessToken = await sut.auth('valid_email@email.com', 'invalid')
+    const accessToken = await sut.auth('valid_email@mail.com', 'invalid_password')
 
     // Assert
     expect(accessToken).toBeNull()
@@ -126,10 +126,10 @@ describe('Auth UseCase', () => {
     const { sut, loadUserByEmailRepositorySpy, encryptSpy } = makeSut()
 
     // Act
-    await sut.auth('valid_email@email.com', 'any')
+    await sut.auth('valid_email@mail.com', 'any_password')
 
     // Assert
-    expect(encryptSpy.password).toBe('any')
+    expect(encryptSpy.password).toBe('any_password')
     expect(encryptSpy.hashedPassword).toBe(loadUserByEmailRepositorySpy.user.password)
   })
 })
