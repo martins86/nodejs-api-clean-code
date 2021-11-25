@@ -63,7 +63,7 @@ describe('Login Router', () => {
     const { sut } = makeSut()
     const httpRequest = {
       body: {
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -123,7 +123,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -142,7 +142,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'invalid_email',
-        password: 'invalid_password'
+        password: 'invalid'
       }
     }
 
@@ -160,7 +160,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'valid_email',
-        password: 'valid_password'
+        password: 'valid'
       }
     }
 
@@ -178,7 +178,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -196,7 +196,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -215,7 +215,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -233,7 +233,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'invalid_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -252,7 +252,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -271,7 +271,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -291,7 +291,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 
@@ -308,7 +308,7 @@ describe('Login Router', () => {
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
-        password: 'any_password'
+        password: 'any'
       }
     }
 

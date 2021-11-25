@@ -23,7 +23,7 @@ const makeLoadUserByEmailRepository = () => {
   }
   const loadUserByEmailRepositorySpy = new LoadUserByEmailRepositorySpy()
   loadUserByEmailRepositorySpy.user = {
-    password: 'hashed_password'
+    password: 'hashed'
   }
   return loadUserByEmailRepositorySpy
 }
@@ -69,7 +69,7 @@ describe('Auth UseCase', () => {
     const { sut, loadUserByEmailRepositorySpy } = makeSut()
 
     // Act
-    await sut.auth('any_email@email.com', 'any_password')
+    await sut.auth('any_email@email.com', 'any')
 
     // Assert
     expect(loadUserByEmailRepositorySpy.email).toBe('any_email@email.com')
@@ -80,7 +80,7 @@ describe('Auth UseCase', () => {
     const sut = new AuthUseCase()
 
     // Act
-    const promise = sut.auth('any_email@email.com', 'any_password')
+    const promise = sut.auth('any_email@email.com', 'any')
 
     // Assert
     expect(promise).rejects.toThrow()
@@ -91,7 +91,7 @@ describe('Auth UseCase', () => {
     const sut = new AuthUseCase({})
 
     // Act
-    const promise = sut.auth('any_email@email.com', 'any_password')
+    const promise = sut.auth('any_email@email.com', 'any')
 
     // Assert
     expect(promise).rejects.toThrow()
@@ -103,7 +103,7 @@ describe('Auth UseCase', () => {
     loadUserByEmailRepositorySpy.user = null
 
     // Act
-    const accessToken = await sut.auth('invalid_email@email.com', 'any_password')
+    const accessToken = await sut.auth('invalid_email@email.com', 'any')
 
     // Assert
     expect(accessToken).toBeNull()
@@ -115,7 +115,7 @@ describe('Auth UseCase', () => {
     encryptSpy.isValid = false
 
     // Act
-    const accessToken = await sut.auth('valid_email@email.com', 'invalid_password')
+    const accessToken = await sut.auth('valid_email@email.com', 'invalid')
 
     // Assert
     expect(accessToken).toBeNull()
@@ -126,10 +126,10 @@ describe('Auth UseCase', () => {
     const { sut, loadUserByEmailRepositorySpy, encryptSpy } = makeSut()
 
     // Act
-    await sut.auth('valid_email@email.com', 'any_password')
+    await sut.auth('valid_email@email.com', 'any')
 
     // Assert
-    expect(encryptSpy.password).toBe('any_password')
+    expect(encryptSpy.password).toBe('any')
     expect(encryptSpy.hashedPassword).toBe(loadUserByEmailRepositorySpy.user.password)
   })
 })
