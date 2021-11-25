@@ -1,4 +1,4 @@
-# Clean code Api JS - [![Build Status][travis-img]][travis-url] 
+# Clean code Api JS - [![Build Status][travis-img]][travis-url]
 
 <br>
 
