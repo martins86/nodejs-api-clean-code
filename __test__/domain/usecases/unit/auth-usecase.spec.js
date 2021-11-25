@@ -94,39 +94,6 @@ describe('Auth UseCase', () => {
     expect(loadUserByEmailRepositorySpy.email).toBe('any_email@mail.com')
   })
 
-  test('Should throw if no dependency is provided', async () => {
-    // Arrange
-    const sut = new AuthUseCase()
-
-    // Act
-    const promise = sut.auth('any_email@mail.com', 'any_password')
-
-    // Assert
-    expect(promise).rejects.toThrow()
-  })
-
-  test('Should throw if no LoadUserByEmailRepository is provided', async () => {
-    // Arrange
-    const sut = new AuthUseCase({})
-
-    // Act
-    const promise = sut.auth('any_email@mail.com', 'any_password')
-
-    // Assert
-    expect(promise).rejects.toThrow()
-  })
-
-  test('Should throw if LoadUserByEmailRepository has no load method', async () => {
-    // Arrange
-    const sut = new AuthUseCase({ LoadUserByEmailRepository: {} })
-
-    // Act
-    const promise = sut.auth('any_email@mail.com', 'any_password')
-
-    // Assert
-    expect(promise).rejects.toThrow()
-  })
-
   test('Should return null if an invalid email is provided', async () => {
     // Arrange
     const { sut, loadUserByEmailRepositorySpy } = makeSut()
@@ -184,5 +151,41 @@ describe('Auth UseCase', () => {
     // Assert
     expect(accessToken).toBeTruthy()
     expect(accessToken).toBe(tokenGeneratorSpy.accessToken)
+  })
+
+  test('Should throw if invalid dependencies are provided', async () => {
+    // Arrange
+    const invalid = {}
+    const loadUserByEmailRepository = makeLoadUserByEmailRepository()
+    const encrypt = makeEncrypt()
+    const suts = [].concat(
+      new AuthUseCase(),
+      new AuthUseCase({}),
+      new AuthUseCase({
+        loadUserByEmailRepository: invalid
+      }),
+      new AuthUseCase({
+        loadUserByEmailRepository
+      }),
+      new AuthUseCase({
+        loadUserByEmailRepository,
+        encrypt: invalid
+      }),
+      new AuthUseCase({
+        loadUserByEmailRepository,
+        encrypt
+      }),
+      new AuthUseCase({
+        loadUserByEmailRepository,
+        encrypt,
+        tokenGenerator: invalid
+      })
+    )
+
+    // Act && Assert
+    for (const sut of suts) {
+      const promise = sut.auth('any_email@mail.com', 'any_password')
+      expect(promise).rejects.toThrow()
+    }
   })
 })
