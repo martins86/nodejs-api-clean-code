@@ -54,6 +54,11 @@ npm i validator
 npm i bcrypt
 ```
 
+```sh
+## adicionando JWT jsonwebtoken
+npm i jsonwebtoken
+```
+
 <br>
 
 # Versions

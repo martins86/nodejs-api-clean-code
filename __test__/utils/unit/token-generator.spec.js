@@ -1,6 +1,8 @@
+const jwt = require('jsonwebtoken')
+
 class TokenGenerator {
   async generate (id) {
-    return null
+    return jwt.sign(id, 'secret')
   }
 }
 
@@ -8,6 +10,7 @@ describe('Token Generator', () => {
   test('Should return null if JTW returns null', async () => {
     // Arrange
     const sut = new TokenGenerator()
+    jwt.token = null
 
     // Act
     const token = await sut.generate('any_id')
@@ -16,7 +19,7 @@ describe('Token Generator', () => {
     expect(token).toBeNull()
   })
 
-  test('Should return null if JTW returns null', async () => {
+  test('Should return a token if JTW returns token', async () => {
     // Arrange
     const sut = new TokenGenerator()
 
@@ -24,6 +27,6 @@ describe('Token Generator', () => {
     const token = await sut.generate('any_id')
 
     // Assert
-    expect(token).toBeNull()
+    expect(token).toBe(jwt.token)
   })
 })
