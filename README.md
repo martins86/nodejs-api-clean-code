@@ -49,6 +49,11 @@ npx husky add .husky/pre-push "npm run test:ci"
 npm i validator
 ```
 
+```sh
+## adicionando Bcrypt
+npm i bcrypt
+```
+
 <br>
 
 # Versions
