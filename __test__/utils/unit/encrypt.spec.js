@@ -1,16 +1,14 @@
+const Encrypt = require('../../../src/utils/encrypt')
 const bcrypt = require('bcrypt')
 
-class Encrypt {
-  async compare (value, hashValue) {
-    const isValid = await bcrypt.compare(value, hashValue)
-    return isValid
-  }
+const makeSut = () => {
+  return new Encrypt()
 }
 
 describe('Encrypt', () => {
   test('Should return true ir bcrypt returns true', async () => {
     // Arrange
-    const sut = new Encrypt()
+    const sut = makeSut()
 
     // Act
     const isValid = await sut.compare('any_password', 'hashed_value')
@@ -21,7 +19,7 @@ describe('Encrypt', () => {
 
   test('Should return false ir bcrypt returns false', async () => {
     // Arrange
-    const sut = new Encrypt()
+    const sut = makeSut()
     bcrypt.isValid = false
 
     // Act
@@ -33,7 +31,7 @@ describe('Encrypt', () => {
 
   test('Should call bcrypt with correct values', async () => {
     // Arrange
-    const sut = new Encrypt()
+    const sut = makeSut()
 
     // Act
     await sut.compare('any_password', 'hashed_value')
