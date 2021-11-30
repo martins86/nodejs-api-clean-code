@@ -59,6 +59,12 @@ npm i bcrypt
 npm i jsonwebtoken
 ```
 
+```sh
+## adicionando Mongo DB e jest-mongodb (Banco em Memória) em Dev
+npm i mongodb
+npm i @shelf/jest-mongodb -D
+```
+
 <br>
 
 # Versions
