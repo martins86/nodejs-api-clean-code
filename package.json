@@ -4,11 +4,11 @@
   "description": "API em JavaScript - NodeJS com Clean Architecture e TDD.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --silent --noStackTrace --coverage --passWithNoTests",
+    "test": "jest --noStackTrace --coverage --passWithNoTests",
     "test:unit": "npm run test -- --watch -c jest-unit.config.js",
     "test:integration": "npm run test -- --watch -c jest-integration.config.js",
-    "test:staged": "npm run test -- --findRelatedTests --colors",
-    "test:ci": "npm run test -- --colors",
+    "test:staged": "npm run test -- --silent --findRelatedTests --colors",
+    "test:ci": "npm run test -- --silent --colors",
     "prepare": "husky install"
   },
   "standard": {
