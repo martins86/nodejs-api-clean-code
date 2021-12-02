@@ -1,6 +1,6 @@
+const MongoConnect = require('../../../../src/utils/connection-mongodb')
 const LoadUserByEmailRepository = require('./../../../../src/infra/repository/load-user-by-email-repository')
-const { MongoClient } = require('mongodb')
-let connection, db
+let db
 
 const makeSut = () => {
   const userModel = db.collection('users')
@@ -13,11 +13,8 @@ const makeSut = () => {
 
 describe('LoadUserByEmailRepository', () => {
   beforeAll(async () => {
-    connection = await MongoClient.connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
-    db = await connection.db()
+    await MongoConnect.connect(process.env.MONGO_URL)
+    db = MongoConnect.db
   })
 
   beforeEach(async () => {
@@ -25,7 +22,7 @@ describe('LoadUserByEmailRepository', () => {
   })
 
   afterAll(async () => {
-    await connection.close()
+    await MongoConnect.disconnect()
   })
 
   test('Should return null if no user is found', async () => {
