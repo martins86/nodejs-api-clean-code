@@ -1,5 +1,5 @@
 const MongoConnect = require('../../../../src/utils/connection-mongodb')
-const LoadUserByEmailRepository = require('../../../../src/infra/repository/load-user-by-email-repository')
+const LoadUserByEmailRepository = require('../../../../src/infra/repositories/load-user-by-email-repository')
 const MissingParamError = require('../../../../src/utils/errors/missing-param-error')
 let db
 
