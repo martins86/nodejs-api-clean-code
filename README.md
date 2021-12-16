@@ -24,7 +24,7 @@ npm init -y
 
 ```sh
 ## instalando packages global.
-npm i -g standard lint-staged husky jest.
+npm i -g standard lint-staged husky jest
 ```
 
 ```sh
@@ -63,6 +63,11 @@ npm i jsonwebtoken
 ## adicionando Mongo DB e jest-mongodb (Banco em Memória) em Dev
 npm i mongodb
 npm i @shelf/jest-mongodb -D
+```
+
+```sh
+## adicionando o express
+npm i express
 ```
 
 <br>
