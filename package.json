@@ -2,8 +2,9 @@
   "name": "nodejs-api-js-clean-code",
   "version": "1.0.0",
   "description": "API em JavaScript - NodeJS com Clean Architecture e TDD.",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "scripts": {
+    "start": "node src/main/index.js",
     "test": "jest --noStackTrace --coverage --passWithNoTests",
     "test:unit": "npm run test -- --watch -c jest-unit.config.js",
     "test:integration": "npm run test -- --watch -c jest-integration.config.js",
