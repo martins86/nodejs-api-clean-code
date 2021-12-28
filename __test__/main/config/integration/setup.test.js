@@ -9,9 +9,9 @@ describe('App Setup', () => {
     })
 
     // Act
-    const res = await request(app).get('/test-x-powered-by')
+    const resp = await request(app).get('/test-x-powered-by')
 
     // Assert
-    expect(res.headers['x-powered-by']).toBeUndefined()
+    expect(resp.headers['x-powered-by']).toBeUndefined()
   })
 })

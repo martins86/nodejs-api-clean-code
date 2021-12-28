@@ -9,11 +9,11 @@ describe('CORS Middleware', () => {
     })
 
     // Act
-    const res = await request(app).get('/test-cors')
+    const resp = await request(app).get('/test-cors')
 
     // Assert
-    expect(res.headers['access-control-allow-origin']).toBe('*')
-    expect(res.headers['access-control-allow-methods']).toBe('*')
-    expect(res.headers['access-control-allow-headers']).toBe('*')
+    expect(resp.headers['access-control-allow-origin']).toBe('*')
+    expect(resp.headers['access-control-allow-methods']).toBe('*')
+    expect(resp.headers['access-control-allow-headers']).toBe('*')
   })
 })
