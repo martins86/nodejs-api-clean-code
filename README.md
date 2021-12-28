@@ -70,6 +70,11 @@ npm i @shelf/jest-mongodb -D
 npm i express
 ```
 
+```sh
+## adicionando o fast-glob
+npm i fast-glob
+```
+
 <br>
 
 # Versions
