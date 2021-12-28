@@ -1,3 +1,10 @@
-const app = require('./config/app')
+const mongoConnect = require('./../utils/connection-mongodb')
+const env = require('./config/env')
 
-app.listen(5858, () => console.log('Server Running!!!'))
+mongoConnect.connect(env.mongoUrl)
+  .then(() => {
+    const app = require('./config/app')
+
+    app.listen(5858, () => console.log('Server Running!!!'))
+  })
+  .catch(console.error)
